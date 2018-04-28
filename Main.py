@@ -42,7 +42,6 @@ def newGame():
     print(empty)  
     tryCount = 0
     while True :
-        tryCount += 1
         # klavyeden sayı girmeyi engelleme
         numberCheck = True
         world = num(input('Bir kelime girin : '))
@@ -57,15 +56,16 @@ def newGame():
                     continue                
         else :
             print(DeathHuman.images[tryCount])
+            tryCount += 1
         print(empty)
         if tryCount+1 == maxCount :
             if endGame():
-                break
+                exit()
             else:
                 newGame()
         if empty.find('_') == -1  :
             if endGame():
-                break
+                exit()
             else:
                 newGame()
 newGame()
