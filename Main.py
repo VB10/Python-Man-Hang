@@ -32,7 +32,7 @@ def endGame():
         return True      
 def newGame():
     os.system('cls' if os.name == 'nt' else 'clear')
-    #mac os X
+    #mac os X or Windows
     findWorld = Service.get('worldlist')
     print('Hello Welcome Man Hang :) \n')
     empty= ''
